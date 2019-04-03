@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>{% block title %}{% endblock %} - My Webpage</title>
-</head>
-<body>
-    <main>{% block content %}{% endblock %}</main>
-    <footer>
-        {% block footer %}
-        &copy; Copyright 2008 by <a href="http://domain.invalid/">you</a>.
-        {% endblock %}
-    </footer>
-</body>
-</html>
+{% extends "base.html" %}
+{% block main %}
+<section>
+    <h2>The world of Jurassic Park</h2>
+
+    <!-- iterate here ? -->
+        <a href="">
+            <figure>
+                <img src="" alt="" />
+                <figcaption>Discover the Brachiosaurus</figcaption>
+            </figure>
+        </a>
+</section>
+{%endblock%}

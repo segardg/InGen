@@ -3,9 +3,9 @@
     <head>
         <title>{%block title %}{% endblock %}Jurassic Park</title>
         <meta charset="utf8" />
-        <link rel="stylesheet" type="text/css" href="{% url_for('static', filename='css/reset.css') %}" />
-        <link rel="stylesheet" type="text/css" href="{% url_for('static', filename='css/style.css') %}" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Staatliches" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+        <!--<link href="https://fonts.googleapis.com/css?family=Montserrat|Staatliches" rel="stylesheet">-->
     </head>
     <body>
         <header>
@@ -20,7 +20,7 @@
             {% block main %}{% endblock %}
         </main>
         <footer>
-            <img src="/assets/img/logojp.png" alt="Jurassic Park" />
+            <img src="{{ url_for('static', filename='img/logojp.png') }}" alt="Jurassic Park" />
         </footer>
     </body>
 </html>
