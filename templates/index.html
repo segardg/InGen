@@ -3,12 +3,14 @@
 <section>
     <h2>The world of Jurassic Park</h2>
 
+    {% for dinono in resp %}
     <!-- iterate here ? -->
-        <a href="">
+        <a href="{{ url_for('detail', name=dinono.slug) }}">
             <figure>
-                <img src="" alt="" />
-                <figcaption>Discover the Brachiosaurus</figcaption>
+                <img src= "{{dinono.avatar}}" alt="{{dinono.slug}}" />
+                <figcaption>Discover the {{dinono["name"]}}</figcaption>
             </figure>
         </a>
+    {% endfor %}
 </section>
 {%endblock%}
